@@ -1,0 +1,228 @@
+create_grid(colums, rows)
+    display grid
+    grid-template-columns columns 
+    grid-template-rows rows
+
+.active 
+    background #DCDCDC
+
+body
+    background #164B69
+    font-family Arial
+    font-size 14px
+
+p
+    text-align justify
+    line-height 2em
+    text-indent 20px
+
+.page
+    background #E3E3E3
+    width 60%
+    margin 0 auto
+
+ul
+    display flex
+    justify-content space-around
+    list-style-type none
+    padding 5px 10px 0px 10px
+
+li
+    padding 10px 0px
+    text-align center
+    width 100%
+
+a
+    font-weight bold
+    text-decoration none
+    color black
+
+li:hover
+    background-color #DCDCDC
+
+a:hover
+    text-decoration none
+    color black
+
+
+//index
+.grid-container-index
+    create_grid(1fr, 0.1fr repeat(3, 0.2fr))
+    // padding 0px 15px
+
+.grid-container-index & .grid-navbar-index
+    // grid-column 1
+    grid-row 1/2
+
+.grid-container-index & .grid-text1-index
+    // grid-column 1
+    grid-row 2/3
+
+.grid-container-index & .grid-textimg-index
+    // grid-column 1
+    grid-row 3/4
+
+.grid-container-index & .grid-video-index
+    // grid-column 1
+    grid-row 4/5
+
+.grid-textimg-index img
+    float right
+    padding-left 10px
+
+.grid-video-index
+    text-align center
+    padding 25px 20px
+
+.grid-text1-index p
+    padding 0 1.5%
+
+.grid-textimg-index p
+    padding 0 1.5%
+
+
+//fonts
+.grid-container-fonts
+    create_grid(1fr, 0.1fr repeat(2, 0.2fr))
+
+.grid-container-fonts & .grid-text-fonts
+    grid-column 1
+    grid-row 3/4
+
+.grid-container-fonts & .grid-images-fonts
+    grid-column 1
+    grid-row 2/3
+
+.grid-container-fonts & .grid-navbar-fonts
+    grid-column 1
+    grid-row 1/2
+
+.grid-images-fonts img
+    width 30%
+    padding 1.5%
+
+.grid-text-fonts p
+    padding 0 1.5%
+
+
+//blocks
+.grid-container-blocks
+    create_grid(repeat(2, 1fr), 0.1fr repeat(3, 0.2fr))
+    grid-gap 0 1%
+    padding 0% 1% 1% 1%
+
+.grid-container-blocks & .grid-navbar-blocks
+    grid-column 1/3
+    grid-row 1/2
+
+.grid-container-blocks & .grid-image1-blocks
+    grid-column 1/2
+    grid-row 2/3
+    // margin 1%
+
+.grid-container-blocks & .grid-image2-blocks
+    grid-column 2/3
+    grid-row 2/3
+    // margin 1%
+
+.grid-container-blocks & .grid-text1-blocks
+    grid-column 1/2
+    grid-row 3/4
+    margin-bottom 1%
+    // margin 1%
+    background red
+
+.grid-container-blocks & .grid-text2-blocks
+    grid-column 2/3
+    grid-row 3/5
+    // margin 1%
+    background yellow
+
+.grid-container-blocks & .grid-text3-blocks
+    grid-column 1/2
+    grid-row 4/5
+    // margin 1%
+    background green
+
+.grid-image1-blocks img 
+    width 100%
+    padding-bottom 5%
+
+.grid-image2-blocks img 
+    width 100%
+
+
+//media
+@media (max-width 700px)
+    .page
+        width 100%
+
+    ul
+        width 100%
+        create_grid(1fr 1fr, repeat(3, 0.2fr))
+        // justify-item start
+        padding 0
+
+    ul & li:nth-of-type(2n+1)
+        grid-column 1/2
+
+    ul & li:nth-of-type(2n)
+        grid-column 2/3
+
+    li
+        // margin 0
+        width 48.5 vw
+
+    .grid-textimg-index img
+        width 100%
+        padding-bottom 5%
+    
+    video
+        width 100%
+        padding 0px 0px
+
+    .grid-images-fonts img
+        width 97%
+    
+    .grid-container-blocks
+        create_grid(1fr, 0.1fr repeat(5, 0.2fr))
+        padding 0 0 0 0
+
+    .grid-container-blocks & .grid-navbar-blocks
+        grid-column 1
+        grid-row 1/2
+
+    .grid-container-blocks & .grid-image1-blocks
+        grid-column 1
+        grid-row 2/3
+        padding-right 1%
+        padding-left 1%
+
+    .grid-container-blocks & .grid-image2-blocks
+        grid-column 1
+        grid-row 3/4
+        padding-right 1%
+        padding-left 1%
+        padding-bottom 2%
+
+    .grid-container-blocks & .grid-text1-blocks
+        grid-column 1
+        grid-row 4/5
+        margin 1%
+
+    .grid-container-blocks & .grid-text2-blocks
+        grid-column 1
+        grid-row 5/6
+        margin 1%
+
+    .grid-container-blocks & .grid-text3-blocks
+        grid-column 1
+        grid-row 6/7
+        margin 1%
+
+
+        
+
+
+
+

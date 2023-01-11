@@ -1,0 +1,13 @@
+extends template.pug
+include navbar.pug
+include mixins.pug
+block content
+    .page
+        .grid-container-fonts
+            .grid-navbar-fonts
+                +create_navbar('fonts')
+            .grid-images-fonts
+                +page2_images
+            .grid-text-fonts 
+                +page2_text
+            

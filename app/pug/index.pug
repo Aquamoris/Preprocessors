@@ -1,0 +1,15 @@
+extends template.pug
+include navbar.pug
+include mixins.pug
+block content
+	.page
+		.grid-container-index
+			.grid-navbar-index
+				+create_navbar('index')
+			.grid-text1-index
+				+page1_text1
+			.grid-textimg-index
+				+page1_text2
+			.grid-video-index
+				video(width="60%", controls="controls")
+					source(src="img/RTX 5090.mp4")

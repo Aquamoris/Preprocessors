@@ -1,0 +1,26 @@
+mixin create_navbar(active_url)
+    ul
+        if active_url == 'index'
+            li.active
+                a(href="index.html") CSS
+        else
+            li
+                a(href="index.html") CSS
+        li
+            a(href="#") Синтаксис CSS
+        li
+            a(href="#") Вставка CSS
+        li
+            a(href="#") CSS текст
+        if active_url == 'fonts'
+            li.active
+               a(href="fonts.html") CSS шрифт
+        else
+            li
+                a(href="fonts.html") CSS шрифт
+        if active_url == 'blocks'
+            li.active
+                a(href="blocks.html") Блоки
+        else
+            li 
+                a(href="blocks.html") Блоки
